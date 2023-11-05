@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Cuotas" />
+        <module name="Examenes" />
+        <module name="Eureka" />
+        <module name="Estudiantes" />
+        <module name="Config" />
+        <module name="Gateway" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Config" target="17" />
+      <module name="Cuotas" target="17" />
+      <module name="Estudiantes" target="17" />
+      <module name="Eureka" target="17" />
+      <module name="Examenes" target="17" />
+      <module name="Gateway" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Config" options="-parameters" />
+      <module name="Cuotas" options="-parameters" />
+      <module name="Estudiantes" options="-parameters" />
+      <module name="Eureka" options="-parameters" />
+      <module name="Examenes" options="-parameters" />
+      <module name="Gateway" options="-parameters" />
+    </option>
+  </component>
+</project>
