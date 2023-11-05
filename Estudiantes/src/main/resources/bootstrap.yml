@@ -1,0 +1,26 @@
+spring:
+  devtools:
+    restart:
+      aditional-paths: src/main/java
+  application:
+    name: Estudiantes
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8091
+  datasource:
+    plataform: postgres
+    driver-class-name: org.postgresql.Driver
+    dbname: estudiantes
+    url: jdbc:postgresql://localhost:5432/estudiantes
+    username: postgres
+    password: 123456
+    servlet:
+      multipart:
+        max-file-size: 5MB
+        max-request-size: 10MB
