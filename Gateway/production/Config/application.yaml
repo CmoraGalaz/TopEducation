@@ -1,0 +1,12 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: Config
+  cloud:
+    config:
+      server:
+        git:
+          default-label: master
+          uri: https://github.com/CmoraGalaz/TopEducation
+          search-paths: "TopEducation/config-data"
