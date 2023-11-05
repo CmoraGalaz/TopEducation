@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/config/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/config/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/cuotas/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/cuotas/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/estudiantes/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/estudiantes/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/eureka/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/eureka/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/examenes/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/examenes/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/gateway/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/gateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Config/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Config/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cuotas/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cuotas/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Estudiantes/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Estudiantes/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Eureka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Eureka/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Examenes/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Examenes/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Gateway/src/main/resources" charset="UTF-8" />
   </component>
 </project>

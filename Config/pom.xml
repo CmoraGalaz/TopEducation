@@ -12,7 +12,7 @@
 	<artifactId>Config</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Config</name>
-	<description>Proyect Config</description>
+	<description>config project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
 		<spring-cloud.version>2022.0.4</spring-cloud.version>
@@ -20,7 +20,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-config</artifactId>
+			<artifactId>spring-cloud-config-server</artifactId>
 		</dependency>
 
 		<dependency>
