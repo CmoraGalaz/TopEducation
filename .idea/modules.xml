@@ -7,7 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/estudiantes/Estudiantes.iml" filepath="$PROJECT_DIR$/estudiantes/Estudiantes.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka/Eureka.iml" filepath="$PROJECT_DIR$/eureka/Eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/examenes/Examenes.iml" filepath="$PROJECT_DIR$/examenes/Examenes.iml" />
-      <module fileurl="file://$PROJECT_DIR$/gateway/Gateway.iml" filepath="$PROJECT_DIR$/gateway/Gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Gateway/Gateway.iml" filepath="$PROJECT_DIR$/Gateway/Gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/TopEducation.iml" filepath="$PROJECT_DIR$/.idea/TopEducation.iml" />
     </modules>
   </component>
