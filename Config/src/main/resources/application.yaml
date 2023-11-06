@@ -9,4 +9,4 @@ spring:
         git:
           default-label: master
           uri: https://github.com/CmoraGalaz/TopEducation
-          search-paths: "TopEducation/config-data"
+          search-paths: "/config-data"
