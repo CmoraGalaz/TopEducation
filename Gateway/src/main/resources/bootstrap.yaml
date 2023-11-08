@@ -1,6 +1,6 @@
 spring:
 application:
-name: backend-gateway-service
+name: Gateway
 cloud:
 config:
 enabled: true
