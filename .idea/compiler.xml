@@ -12,6 +12,7 @@
         <module name="Eureka" />
         <module name="Estudiantes" />
         <module name="Config" />
+        <module name="Gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
