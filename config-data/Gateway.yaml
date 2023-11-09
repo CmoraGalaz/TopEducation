@@ -30,7 +30,7 @@ spring:
           uri: lb://Estudiantes
           predicates:
             - Path=/estudiantes/**
-        - id: Cuotas
-          uri: lb://Cuotas
-          predicates:
-            - Path=/Cuotas/**
+        #- id: Cuotas
+         # uri: lb://Cuotas
+          #predicates:
+           # - Path=/Cuotas/**
