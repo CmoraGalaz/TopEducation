@@ -1,6 +1,6 @@
 package Cuotas.Cuotas.Models;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.*;
 
 

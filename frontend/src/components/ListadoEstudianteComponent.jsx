@@ -19,7 +19,7 @@ function ListadoEstudianteComponent() {
         <div className="general">
             <HeaderComponent/>
             <div align="center" className="container-2">
-                <h1><b> Listado de Acopio de Leche</b></h1>
+                <h1><b> Estudiantes Datos</b></h1>
                 <table border="1" className="content-table">
                     <thead>
                         <tr>
@@ -30,7 +30,7 @@ function ListadoEstudianteComponent() {
                             <th>Tipo de Colegio</th>
                             <th>Nombre de Colegio</th>
                             <th>Año de egreso</th>
-                            <th>Año de ingreso</th>
+                        
                         </tr>
                     </thead>
                     <tbody>
@@ -40,11 +40,11 @@ function ListadoEstudianteComponent() {
                                     <td> {estudiante.rut} </td>
                                     <td> {estudiante.nombres} </td>
                                     <td> {estudiante.apellidos} </td>
-                                    <td> {estudiante.fecha_nacimiento} </td>
-                                    <td> {estudiante.tipo_colegio} </td>
-                                    <td> {estudiante.nombre_colegio} </td>
-                                    <td> {estudiante.anio_egreso} </td>
-                                    <td> {estudiante.anio_ingreso} </td>
+                                    <td> {estudiante.fechaNacimiento} </td>
+                                    <td> {estudiante.tipoColegio} </td>
+                                    <td> {estudiante.nombreColegio} </td>
+                                    <td> {estudiante.egreso} </td>
+                                   
                                 </tr>
                             ))
                         }

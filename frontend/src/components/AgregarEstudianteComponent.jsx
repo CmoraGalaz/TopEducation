@@ -64,11 +64,11 @@ function AgregarEstudianteComponent(props){
                     rut: input.rut,
                     nombres: input.nombres,
                     apellidos: input.apellidos,
-                    fecha_nacimiento: input.fecha_nacimiento,
-                    tipo_colegio: input.tipo_colegio,
-                    nombre_colegio: input.nombre_colegio,
-                    anio_egreso: input.anio_egreso,
-                    anio_ingreso: "",
+                    fechaNacimiento: input.fecha_nacimiento,
+                    nombreColegio: input.nombre_colegio,
+                    tipoColegio: input.tipo_colegio,
+                    egreso: input.anio_egreso,
+                    
                 };
                 console.log(newEstudiante);
                 EstudianteService.createEstudiante(newEstudiante);
@@ -120,6 +120,7 @@ function AgregarEstudianteComponent(props){
                         <Form.Label className="agregar"> Tipo: </Form.Label>
                         <select className="agregar" name="tipo_colegio" required value = {input.tipo_colegio} onChange={changeTipoColegioHandler}>
                             <option value="0" disabled>Tipo colegio</option>
+                            <option value="0">Seleccione</option>
                             <option value="Municipal">Municipal</option>
                             <option value="Subvencionado">Subvencionado</option>
                             <option value="Privado">Privado</option>
