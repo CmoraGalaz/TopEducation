@@ -30,4 +30,7 @@ public class EstudiantesService implements IEstudiantesService<Estudiantes> {
         iEstudiantesRepository.deleteById(rut);
 
     }
+    public Estudiantes findRut(Integer rut) {
+        return iEstudiantesRepository.findByRut(rut);
+    }
 }

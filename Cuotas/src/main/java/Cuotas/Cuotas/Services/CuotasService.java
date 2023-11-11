@@ -5,6 +5,7 @@ import Cuotas.Cuotas.Models.Estudiantes;
 import Cuotas.Cuotas.Models.Pago;
 import Cuotas.Cuotas.Models.Registros;
 import Cuotas.Cuotas.Repositories.ICuotasRepository;
+import org.apache.commons.lang.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
@@ -21,6 +22,8 @@ public class CuotasService implements ICuotasService<Cuotas>{
 
     @Autowired
     RestTemplate restTemplate;
+    @Autowired
+    private  CuotasService cuotasService;
 
 
     @Override
@@ -42,7 +45,16 @@ public class CuotasService implements ICuotasService<Cuotas>{
     public  Registros CrearCuotasRegistros(Registros registros){
         double arancel = 1500000;
         int w = 1;
-        if(registros.rut()>0){
+        Estudiantes estudiantes = cuotasService.findByRut(registros.rut());
+        if(estudiantes ==null){
+
+            return registros;
+        }
+
+
+        System.out.println(estudiantes);
+
+        if(registros.rut().equals(estudiantes.getRut())){
             if((registros.TipoColegio().equals("Municipal")) && (registros.numCuotas()<= 10)){
                 arancel = arancel - (arancel*0.20);
                 if((registros.anhoEgreso()-2023)<=1){
@@ -305,9 +317,13 @@ public class CuotasService implements ICuotasService<Cuotas>{
 
 
         }
-
-
         return registros;
+
+
+
+
+
+
     }
 
     public Cuotas PagarCuota(Pago pago){
@@ -350,14 +366,18 @@ public class CuotasService implements ICuotasService<Cuotas>{
 
     public List<Cuotas> findAllByRut(Integer rut){ return iCuotasRepository.findByRut(rut);}
 
+
+
+
     public Estudiantes findByRut(Integer rut){
         System.out.println("rut: "+rut);
         ResponseEntity<Estudiantes> response = restTemplate.exchange(
-                "http://localhost:8080/estudiante/"+rut,
+                "http://localhost:8082/estudiantes/"+rut,
                 HttpMethod.GET,
                 null,
                 new ParameterizedTypeReference<Estudiantes>() {}
         );
+
         return response.getBody();
     }
 }

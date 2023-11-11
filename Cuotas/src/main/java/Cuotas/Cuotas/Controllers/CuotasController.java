@@ -41,7 +41,7 @@ public class CuotasController {
         return  new ResponseEntity<>( cuotasService.update(cuotaNueva),HttpStatus.OK);
     }
 
-    @GetMapping("/{rut}")
+    @GetMapping("/rut/{rut}")
     public ResponseEntity<List<Cuotas>>findByRut(@PathVariable("rut")Integer rut){
         List<Cuotas> cuotasrut = cuotasService.findAllByRut(rut);
 
@@ -49,14 +49,18 @@ public class CuotasController {
 
     }
 
-    @GetMapping("/{rutestudiante}")
-    public ResponseEntity<List<Cuotas>>findByRutEstudiante(@PathVariable("rutestudiante")Integer rutestudiante){
-       Estudiantes estudiantes =  cuotasService.findByRut(rutestudiante);
-        List<Cuotas> cuotasrut = cuotasService.findAllByRut(rutestudiante);
-
-
-        return new ResponseEntity<>(cuotasrut, HttpStatus.OK);
-
+    @GetMapping("/{rut}")
+    public ResponseEntity<List<Cuotas>> listado(@PathVariable("rut") Integer rut){
+        System.out.println("Listar");
+        System.out.println("rut: "+rut+"\n");
+        Estudiantes estudianteEntity = cuotasService.findByRut(rut);
+        System.out.println(estudianteEntity);
+        if(estudianteEntity != null){
+            List<Cuotas> cuotasEntities = cuotasService.findAllByRut(estudianteEntity.getRut());
+            return ResponseEntity.ok(cuotasEntities);
+        }
+        return ResponseEntity.ok(null);
     }
+
 
 }

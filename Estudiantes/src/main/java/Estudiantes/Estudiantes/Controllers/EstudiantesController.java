@@ -25,4 +25,9 @@ public class EstudiantesController {
     public ResponseEntity<Estudiantes> create(@RequestBody Estudiantes estudiantes){
         return new ResponseEntity<>(estudiantesService.create(estudiantes), HttpStatus.CREATED);
     }
+    @GetMapping("/{rutestudiante}")
+    public ResponseEntity<Estudiantes> findRut(@PathVariable("rutestudiante")Integer rutestudiante) {
+       Estudiantes estudianteRut= estudiantesService.findRut(rutestudiante);
+        return new ResponseEntity<>(estudianteRut, HttpStatus.OK);
+    }
 }
