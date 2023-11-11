@@ -1,15 +1,15 @@
 import AxiosInstanceCoutas from "../intercertor/AxiosInstanceCuotas";
 class CuotasService {
 
-    getEstudiantes(){
+    getCuotas(){
         return AxiosInstanceCoutas.get('/all');
     }
 
-    getEstudianteByRut(rut){
+    getCuotasByRut(rut){
         return AxiosInstanceCoutas.get('/'+ rut);
     }
-    createEstudiante(estudiante){
-        return AxiosInstanceCoutas.post('/',estudiante);
+    createCuotas(cuotas){
+        return AxiosInstanceCoutas.post('/registro',cuotas);
     }
 }
 

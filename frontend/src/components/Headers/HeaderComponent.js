@@ -14,6 +14,7 @@ function HeaderComponent() {
                 </div>
                 <nav></nav>
                 <a className="btn" href="/agregar_estudiante"><button>Ingresar nuevo Estudiante</button></a>
+               
             </header>
         </div>
     )

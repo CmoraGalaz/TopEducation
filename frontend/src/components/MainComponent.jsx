@@ -21,6 +21,7 @@ function MainComponents() {
     const handleClickListaCuotas = () => {
         navigate("/lista_cuotas");
     };
+   
     return (
         <div>
             <HeaderComponent></HeaderComponent>
