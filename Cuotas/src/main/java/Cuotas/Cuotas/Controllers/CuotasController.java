@@ -39,4 +39,13 @@ public class CuotasController {
 
         return  new ResponseEntity<>( cuotasService.update(cuotaNueva),HttpStatus.OK);
     }
+
+    @GetMapping("/{rut}")
+    public ResponseEntity<List<Cuotas>>findByRut(@PathVariable("rut")Integer rut){
+        List<Cuotas> cuotasrut = cuotasService.findAllByRut(rut);
+
+        return new ResponseEntity<>(cuotasrut, HttpStatus.OK);
+
+    }
+
 }

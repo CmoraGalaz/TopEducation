@@ -10,4 +10,8 @@ public interface ICuotasService<T> {
     Cuotas create(Cuotas cuotas);
     Cuotas update(Cuotas cuotas);
 
+
+
+
+
 }

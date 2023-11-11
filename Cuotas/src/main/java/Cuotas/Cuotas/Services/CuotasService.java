@@ -1,11 +1,16 @@
 package Cuotas.Cuotas.Services;
 
 import Cuotas.Cuotas.Models.Cuotas;
+import Cuotas.Cuotas.Models.Estudiantes;
 import Cuotas.Cuotas.Models.Pago;
 import Cuotas.Cuotas.Models.Registros;
 import Cuotas.Cuotas.Repositories.ICuotasRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.Date;
 import java.util.List;
@@ -14,6 +19,8 @@ public class CuotasService implements ICuotasService<Cuotas>{
     @Autowired
     private ICuotasRepository iCuotasRepository;
 
+    @Autowired
+    RestTemplate restTemplate;
 
 
     @Override
@@ -30,6 +37,8 @@ public class CuotasService implements ICuotasService<Cuotas>{
     public Cuotas update(Cuotas cuotas) {
         return iCuotasRepository.save(cuotas);
     }
+
+
     public  Registros CrearCuotasRegistros(Registros registros){
         double arancel = 1500000;
         int w = 1;
@@ -339,5 +348,6 @@ public class CuotasService implements ICuotasService<Cuotas>{
         return cuotaPagada;
     }
 
+    public List<Cuotas> findAllByRut(Integer rut){ return iCuotasRepository.findByRut(rut);}
 
 }
