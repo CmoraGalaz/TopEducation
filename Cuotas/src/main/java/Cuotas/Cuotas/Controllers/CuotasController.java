@@ -1,6 +1,7 @@
 package Cuotas.Cuotas.Controllers;
 
 import Cuotas.Cuotas.Models.Cuotas;
+import Cuotas.Cuotas.Models.Estudiantes;
 import Cuotas.Cuotas.Models.Pago;
 import Cuotas.Cuotas.Models.Registros;
 import Cuotas.Cuotas.Services.CuotasService;
@@ -43,6 +44,16 @@ public class CuotasController {
     @GetMapping("/{rut}")
     public ResponseEntity<List<Cuotas>>findByRut(@PathVariable("rut")Integer rut){
         List<Cuotas> cuotasrut = cuotasService.findAllByRut(rut);
+
+        return new ResponseEntity<>(cuotasrut, HttpStatus.OK);
+
+    }
+
+    @GetMapping("/{rutestudiante}")
+    public ResponseEntity<List<Cuotas>>findByRutEstudiante(@PathVariable("rutestudiante")Integer rutestudiante){
+       Estudiantes estudiantes =  cuotasService.findByRut(rutestudiante);
+        List<Cuotas> cuotasrut = cuotasService.findAllByRut(rutestudiante);
+
 
         return new ResponseEntity<>(cuotasrut, HttpStatus.OK);
 

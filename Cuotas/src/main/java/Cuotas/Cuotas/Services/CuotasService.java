@@ -350,4 +350,14 @@ public class CuotasService implements ICuotasService<Cuotas>{
 
     public List<Cuotas> findAllByRut(Integer rut){ return iCuotasRepository.findByRut(rut);}
 
+    public Estudiantes findByRut(Integer rut){
+        System.out.println("rut: "+rut);
+        ResponseEntity<Estudiantes> response = restTemplate.exchange(
+                "http://localhost:8080/estudiante/"+rut,
+                HttpMethod.GET,
+                null,
+                new ParameterizedTypeReference<Estudiantes>() {}
+        );
+        return response.getBody();
+    }
 }
