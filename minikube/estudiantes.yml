@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: estudiantes
+  labels:
+    app: estudiantes
+spec:
+  selector:
+    matchLabels:
+      app: estudiantes
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: estudiantes
+    spec:
+      containers:
+        - name: estudiantes
+          image: cmoragalaz/estudiantes:latest
+          ports:
+            - containerPort: 8081
+          env:
+            - name: SPRING_CLOUD_CONFIG_URI
+              value: http://config:8081
+            - name: EUREKA_CLIENT_SERVICEURL_DEFAULTZONE
+              value: http://eureka:8761
+            - name: eureka.instance.preferIpAddress
+              value: "true"
+            - name: POSTGRES_DB_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: postgres-config-map
+                  key: POSTGRES_DB_HOST
+            - name: POSTGRES_DB_ESTUDIANTES
+              valueFrom:
+                configMapKeyRef:
+                  name: postgres-config-map
+                  key: POSTGRES_DB_ESTUDIANTES
+            - name: POSTGRES_USER
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-credentials
+                  key: POSTGRES_USER
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-credentials
+                  key: POSTGRES_PASSWORD
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: estudiantes
+  labels:
+    app: estudiantes
+spec:
+  selector:
+    app: estudiantes
+  ports:
+    - protocol: TCP
+      port: 8082
+      targetPort: 8082
+  type: LoadBalancer
