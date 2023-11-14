@@ -131,10 +131,10 @@ function AgregarEstudianteComponent(props){
                         <Form.Label className="agregar">Nombre del colegio:</Form.Label>
                         <Form.Control className="agregar" type="text" name="nombre_colegio"/>
                     </Form.Group>
-                    <Button className="boton" onClick={ingresarEstudiante}>Registrar Estudiante</Button>
+                    <Button className="boton" onClick={ingresarEstudiante}>Registrar Estudiant</Button>
                 </Form>
             </div>
         </div>
     )
 }
-    export default AgregarEstudianteComponent
+    export default AgregarEstudianteComponent;

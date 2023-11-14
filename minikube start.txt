@@ -1,0 +1,17 @@
+minikube start
+minikube status
+
+cd Minikube
+
+kubectl apply -f frontend.yml
+
+kubectl apply -f postgres-secrets.yml
+kubectl apply -f postgres-configmap.yml
+kubectl apply -f postgres-dp-sv-pvc.yml
+
+kubectl apply -f config.yml
+kubectl apply -f eureka.yml
+
+kubectl apply -f estudiantes.yml
+kubectl apply -f cuotas.yml
+kubectl apply -f gateway.yml
