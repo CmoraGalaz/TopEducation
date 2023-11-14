@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 const AxiosInstanceCoutas = axios.create({
-    baseURL:"http://localhost:8083/cuotas",
+    baseURL:"http://localhost:8080/cuotas",
 });
 
 AxiosInstanceCoutas.interceptors.request.use(

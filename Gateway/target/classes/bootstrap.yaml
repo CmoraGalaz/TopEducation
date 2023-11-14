@@ -1,7 +1,6 @@
-spring:
-  application:
-    name: Gateway
-  cloud:
-    config:
-      enabled: true
-      uri: http://localhost:8081
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http:

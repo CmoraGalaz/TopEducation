@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 const AxiosInstanceEstudiante = axios.create({
-    baseURL:"http://localhost:8082/estudiantes",
+    baseURL:"http://localhost:8080/estudiantes",
 });
 
 AxiosInstanceEstudiante.interceptors.request.use(

@@ -372,7 +372,7 @@ public class CuotasService implements ICuotasService<Cuotas>{
     public Estudiantes findByRut(Integer rut){
         System.out.println("rut: "+rut);
         ResponseEntity<Estudiantes> response = restTemplate.exchange(
-                "http://localhost:8082/estudiantes/"+rut,
+                "http://localhost:8080/estudiantes/"+rut,
                 HttpMethod.GET,
                 null,
                 new ParameterizedTypeReference<Estudiantes>() {}
